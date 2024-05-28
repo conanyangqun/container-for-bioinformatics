@@ -11,3 +11,5 @@ RUN micromamba install \
     -c bioconda \
     -n base \
     nanophase
+
+ENV PATH=/opt/conda/bin:$PATH
