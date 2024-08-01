@@ -1,8 +1,9 @@
 name: Publish pangolin Docker Image.
 
 on:
-  tags:
-    - pangolin*
+  push:
+    tags:
+      - pangolin*
 
 jobs:
   push_to_registry:
