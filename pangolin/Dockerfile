@@ -9,6 +9,6 @@ RUN conda create -n pangolin -y && \
         -c conda-forge \
         -c defaults \
         -n pangolin \
-        pangolin==4.3-2
+        pangolin==4.3
 
 ENV PATH=/opt/conda/envs/pangolin/bin:$PATH
