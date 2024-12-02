@@ -1,7 +1,7 @@
 name: build and push to docker hub.
 
 on:
-  workflow_dispath
+  workflow_dispatch
 
 jobs:
   push_to_registry:
