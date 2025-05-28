@@ -3,4 +3,4 @@ FROM continuumio/miniconda3:25.1.1-2
 LABEL author="conanyangqun"
 LABEL github="https://github.com/conanyangqun/container-for-bioinformatics"
 
-RUN conda install -y -c conda-forge -c bioconda cuteSV==2.1.2
+RUN conda install -y -c conda-forge -c bioconda python3==3.10 cuteSV==2.1.2
