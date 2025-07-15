@@ -4,21 +4,22 @@ LABEL author="conanyangqun"
 LABEL github="https://github.com/conanyangqun/container-for-bioinformatics"
 
 # conflicts.
-#RUN conda install -y \
-#    -c conda-forge \
-#    -c bioconda \
-#    augur
-
 RUN conda install -y \
     -c conda-forge \
     -c bioconda \
-    mafft \
-    raxml \
-    fasttree \
-    iqtree \
-    vcftools \
-    seqkit \
-    sqlite
+    augur==31.3.0
 
-# augur
-RUN pip3 install --no-cache-dir nextstrain-augur
+# RUN conda install -y \
+#     -c conda-forge \
+#     -c bioconda \
+#     mafft \
+#     raxml \
+#     fasttree \
+#     iqtree \
+#     vcftools \
+#     seqkit \
+#     sqlite
+# 
+# # augur
+# # failed because of numpy
+# RUN pip3 install --no-cache-dir nextstrain-augur
