@@ -8,17 +8,8 @@ RUN conda install \
     -y \
     -c conda-forge \
     -c bioconda \
-    mafft \
-    raxml \
-    fasttree \
-    iqtree \
-    vcftools \
-    seqkit \
-    sqlite \
-    augur \
     snakenake \
     biopython \
     numpy \
     pandas \
-    treetime \
-    nextclade
+    treetime
