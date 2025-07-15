@@ -8,7 +8,7 @@ RUN conda install \
     -y \
     -c conda-forge \
     -c bioconda \
-    snakenake \
+    snakemake \
     biopython \
     numpy \
     pandas \
