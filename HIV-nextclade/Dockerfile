@@ -4,7 +4,10 @@ LABEL author="conanyangqun"
 LABEL github="https://github.com/conanyangqun/HIV-nextclade"
 
 # all softwares.
-RUN conda install -y -c conda-forge -c bioconda \
+RUN conda install \
+    -y \
+    -c conda-forge \
+    -c bioconda \
     mafft \
     raxml \
     fasttree \
@@ -12,7 +15,7 @@ RUN conda install -y -c conda-forge -c bioconda \
     vcftools \
     seqkit \
     sqlite \
-    nextstrain-augur \
+    augur \
     snakenake \
     biopython \
     numpy \
