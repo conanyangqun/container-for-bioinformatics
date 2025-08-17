@@ -7,8 +7,7 @@ LABEL github="https://github.com/conanyangqun/container-for-bioinformatics"
 RUN conda install -y \
     -c conda-forge \
     -c bioconda \
-    python==3.12 \
-    augur==31.3.0
+    augur==31.4.0
 
 # RUN conda install -y \
 #     -c conda-forge \
