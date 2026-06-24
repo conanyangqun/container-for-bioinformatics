@@ -7,6 +7,14 @@ ARG version="v4.3.0"
 ARG base_url="https://github.com/ablab/spades"
 ARG DEBIAN_FRONTEND="noninteractive"
 
+# set timezone
+RUN apt-get update && apt-get install -y tzdata
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && dpkg-reconfigure --frontend noninteractive tzdata
+
+RUN apt-get update && apt-get install -y \
+    curl
+
 RUN mkdir /biosoft /biosrc
 WORKDIR /biosrc
 RUN curl -L "${base_url}/releases/download/${version}/SPAdes-4.3.0-Linux.tar.gz" -o SPAdes-4.3.0-Linux.tar.gz; \
@@ -14,6 +22,6 @@ RUN curl -L "${base_url}/releases/download/${version}/SPAdes-4.3.0-Linux.tar.gz"
     mv SPAdes-4.3.0-Linux/* /biosoft/;
 
 WORKDIR /
-RUN rm -rf /biosrc
+RUN rm -rf /biosrc;apt-get clean
 
 ENV PATH=/biosoft/bin:$PATH
