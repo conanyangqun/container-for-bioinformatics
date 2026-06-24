@@ -13,7 +13,9 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && dpkg-reconfigure --frontend noninteractive tzdata
 
 RUN apt-get update && apt-get install -y \
-    curl
+    curl \
+    python3 \
+    python3-pip
 
 RUN mkdir /biosoft /biosrc
 WORKDIR /biosrc
